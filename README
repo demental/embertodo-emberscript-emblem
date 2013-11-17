@@ -1,4 +1,19 @@
-RECIPES
+Embertodo
+========================
+
+This application was generated with the rails_apps_composer gem:
+https://github.com/RailsApps/rails_apps_composer
+provided by the RailsApps Project:
+http://railsapps.github.io/
+
+________________________
+
+Recipes:
 ["apps4", "controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
-PREFERENCES
+
+Preferences:
 {:rvmrc=>true, :dev_webserver=>"thin", :prod_webserver=>"thin", :apps4=>"none", :database=>"mongodb", :orm=>"mongoid", :templates=>"slim", :unit_test=>"rspec", :continuous_testing=>"guard", :integration=>"rspec-capybara", :fixtures=>"factory_girl", :frontend=>"bootstrap3", :form_builder=>"simple_form", :email=>"mandrill", :authentication=>"devise", :devise_modules=>"default", :authorization=>"cancan", :starter_app=>"admin_app", :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :ban_spiders=>true, :github=>true, :git=>true}
+
+________________________
+
+License
