@@ -42,3 +42,9 @@ group :test do
   gem 'email_spec'
   gem 'mongoid-rspec', '>= 1.6.0', :github=>"evansagge/mongoid-rspec"
 end
+
+
+
+gem 'ember-rails'
+gem 'ember-source'
+gem 'ember_script-rails', :github => 'ghempton/ember-script-rails'
