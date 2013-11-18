@@ -8,7 +8,7 @@ section#todoapp
       each itemController="todo"
         li class={isCompleted:completed isEditing:editing}
           if isEditing
-            input class='edit'
+            = edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"
           else
             = input type="checkbox" class="toggle" checked=isCompleted
             label{ action "editTodo" on="doubleClick" } = title
