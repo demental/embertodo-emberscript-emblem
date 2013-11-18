@@ -14,7 +14,8 @@ section#todoapp
 
   footer#footer
     span#todo-count
-      strong 2 todos left
+      strong #{remaining}
+      |&nbsp;#{inflection} left
     ul#filters
       li
         a href="all" class="selected" All
