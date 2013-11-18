@@ -65,9 +65,6 @@ GEM
       barber (>= 0.4.1)
       emblem-source
     bcrypt-ruby (3.1.2)
-    better_errors (1.0.1)
-      coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.0.2.1)
@@ -115,8 +112,8 @@ GEM
       handlebars-source
       jquery-rails (>= 1.0.17)
       railties (>= 3.1)
-    ember-source (1.2.0.beta.4)
-      handlebars-source (= 1.1.1)
+    ember-source (1.2.0.beta.3)
+      handlebars-source (= 1.0.12)
     ember_script (0.0.5)
       ember_script-source (>= 0.0.2)
       execjs
@@ -164,7 +161,7 @@ GEM
       haml (>= 3.0)
       nokogiri
       ruby_parser
-    handlebars-source (1.1.1)
+    handlebars-source (1.0.12)
     hike (1.2.3)
     hpricot (0.8.6)
     html2haml (1.0.1)
@@ -302,7 +299,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  better_errors
   binding_of_caller
   bootstrap-sass (>= 3.0.0.0)
   cancan
@@ -312,10 +308,10 @@ DEPENDENCIES
   devise
   email_spec
   ember-data-source (~> 1.0.0.beta.3)
-  ember-rails
-  ember-source (>= 1.2.0.beta.3)
+  ember-rails (>= 0.14.0)
+  ember-source (= 1.2.0.beta.3)
   ember_script-rails!
-  emblem-rails
+  emblem-rails (= 0.2.0)
   factory_girl_rails
   figaro
   guard-bundler
@@ -323,6 +319,7 @@ DEPENDENCIES
   guard-rspec
   haml-rails
   haml2slim
+  handlebars-source (~> 1.0.12)
   html2haml
   hub
   jbuilder (~> 1.2)
