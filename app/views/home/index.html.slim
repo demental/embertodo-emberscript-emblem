@@ -5,18 +5,14 @@ script type="text/x-handlebars" data-template-name="todos"
       input type="text" id="new-todo" placeholder="What needs to be done?"
       section#main
         ul#todo-list
-          li.completed
-            input type="checkbox" class="toggle"
-            label Learn Ember.js
-            button class="destroy"
+          |{{#each}}
           li
             input type="checkbox" class="toggle"
-            label ...
+            label
+              |{{title}}
             button class="destroy"
-          li
-            input type="checkbox" class="toggle"
-            label Profit!
-            button class="destroy"
+
+          |{{/each}}
 
         input type="checkbox" id="toggle-all"
 

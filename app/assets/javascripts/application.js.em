@@ -11,3 +11,5 @@
 
 # for more details see: http://emberjs.com/guides/application/
 window.Embertodo = Ember.Application.create()
+
+class Embertodo.ApplicationAdapter extends DS.FixtureAdapter
