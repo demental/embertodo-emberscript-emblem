@@ -8,7 +8,19 @@ class Embertodo.TodosController extends Ember.ArrayController
   inflection: ->
     if @remaining == 1 then 'item' else 'items'
 
+  +computed completed
+  hasCompleted: ->
+    @completed > 0
+
+  +computed @each.isCompleted
+  completed: ->
+    @filterBy('isCompleted', true).length
+
   actions:
+    clearCompleted: ->
+      @filterBy('isCompleted', true).invoke('deleteRecord').invoke 'save'
+
+
     createTodo: ->
       title = @newTitle
       return unless title.trim()
@@ -16,7 +28,5 @@ class Embertodo.TodosController extends Ember.ArrayController
       todo = @store.createRecord 'todo',
         title: title,
         isCompleted: false
-
       @newTitle = ''
-
       todo.save()

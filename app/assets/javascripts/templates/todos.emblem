@@ -18,4 +18,5 @@ footer#footer
     li
       linkTo "todos.completed" activeClass="selected" | Completed
 
-  button#clear-completed Clear completed (1)
+  if hasCompleted
+    button#clear-completed{ action "clearCompleted"  } Clear completed ({{completed}})
