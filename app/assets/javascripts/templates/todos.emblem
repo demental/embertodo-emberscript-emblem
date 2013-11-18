@@ -6,10 +6,13 @@ section#todoapp
   section#main
     ul#todo-list
       each itemController="todo"
-        li class=isCompleted:completed
-          = input type="checkbox" class="toggle" checked=isCompleted
-          label = title
-          button class="destroy"
+        li class={isCompleted:completed isEditing:editing}
+          if isEditing
+            input class='edit'
+          else
+            = input type="checkbox" class="toggle" checked=isCompleted
+            label{ action "editTodo" on="doubleClick" } = title
+            button class="destroy"
     input type="checkbox" id="toggle-all"
 
   footer#footer

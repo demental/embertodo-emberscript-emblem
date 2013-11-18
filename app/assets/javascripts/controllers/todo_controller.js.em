@@ -6,3 +6,9 @@ class Embertodo.TodoController extends Ember.ObjectController
       @model.isCompleted = value
       @model.save()
     @model.isCompleted
+
+  actions:
+    editTodo: ->
+      @isEditing = true
+
+  isEditing: false
