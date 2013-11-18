@@ -12,10 +12,10 @@ footer#footer
     |&nbsp;#{inflection} left
   ul#filters
     li
-      a href="all" class="selected" All
+      linkTo "todos.index" activeClass="selected" | All
     li
       linkTo "todos.active" activeClass="selected" | Active
     li
-      a href="completed" Completed
+      linkTo "todos.completed" activeClass="selected" | Completed
 
   button#clear-completed Clear completed (1)

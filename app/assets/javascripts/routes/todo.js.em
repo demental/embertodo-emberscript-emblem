@@ -14,3 +14,9 @@ class Embertodo.TodosActiveRoute extends Ember.Route
 
   renderTemplate: (controller)->
     @render 'todos/index', controller: controller
+
+
+class Embertodo.TodosCompletedRoute extends Embertodo.TodosActiveRoute
+  model: ->
+    @store.filter 'todo', (todo) ->
+      todo.get 'isCompleted'
