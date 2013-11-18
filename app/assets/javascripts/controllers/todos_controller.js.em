@@ -16,6 +16,10 @@ class Embertodo.TodosController extends Ember.ArrayController
   completed: ->
     @filterBy('isCompleted', true).length
 
+  +computed @each.isCompleted
+  allAreDone: (key, value) ->
+    @length && @everyBy('isCompleted', true)
+
   actions:
     clearCompleted: ->
       @filterBy('isCompleted', true).invoke('deleteRecord').invoke 'save'
