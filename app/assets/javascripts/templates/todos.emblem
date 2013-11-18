@@ -1,30 +1,21 @@
-section#todoapp
-  header#header
-    h1 Todos
-    = input type="text" id="new-todo" placeholder="What needs to be done?" value=newTitle action="createTodo"
+header#header
+  h1 Todos
+  = input type="text" id="new-todo" placeholder="What needs to be done?" value=newTitle action="createTodo"
 
-  section#main
-    ul#todo-list
-      each itemController="todo"
-        li class={isCompleted:completed isEditing:editing}
-          if isEditing
-            = edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"
-          else
-            = input type="checkbox" class="toggle" checked=isCompleted
-            label{ action "editTodo" on="doubleClick" } = title
-            button.destroy{ action "removeTodo"  }
-    input type="checkbox" id="toggle-all"
+section#main
+  outlet
+  input type="checkbox" id="toggle-all"
 
-  footer#footer
-    span#todo-count
-      strong #{remaining}
-      |&nbsp;#{inflection} left
-    ul#filters
-      li
-        a href="all" class="selected" All
-      li
-        a href="active" Active
-      li
-        a href="completed" Completed
+footer#footer
+  span#todo-count
+    strong #{remaining}
+    |&nbsp;#{inflection} left
+  ul#filters
+    li
+      a href="all" class="selected" All
+    li
+      linkTo "todos.active" activeClass="selected" | Active
+    li
+      a href="completed" Completed
 
-    button#clear-completed Clear completed (1)
+  button#clear-completed Clear completed (1)
