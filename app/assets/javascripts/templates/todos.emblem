@@ -12,7 +12,7 @@ section#todoapp
           else
             = input type="checkbox" class="toggle" checked=isCompleted
             label{ action "editTodo" on="doubleClick" } = title
-            button class="destroy"
+            button.destroy{ action "removeTodo"  }
     input type="checkbox" id="toggle-all"
 
   footer#footer

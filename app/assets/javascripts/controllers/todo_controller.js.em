@@ -11,6 +11,10 @@ class Embertodo.TodoController extends Ember.ObjectController
     editTodo: ->
       @isEditing = true
 
+    removeTodo: ->
+      @model.deleteRecord()
+      @model.save()
+
     acceptChanges: ->
       @isEditing = false
 
