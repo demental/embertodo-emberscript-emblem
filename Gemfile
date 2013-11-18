@@ -46,5 +46,13 @@ end
 
 
 gem 'ember-rails'
-gem 'ember-source'
+gem 'emblem-rails'
+gem 'ember-source', '>= 1.2.0.beta.3'
 gem 'ember_script-rails', :github => 'ghempton/ember-script-rails'
+
+
+# gem 'ember-rails', '>= 0.14.0'
+# gem 'ember-source', '1.2.0.beta.3'
+# gem 'handlebars-source', '~> 1.0.12'
+# gem 'emblem-rails', '0.2.0'
+gem 'ember-data-source', '~> 1.0.0.beta.3'
