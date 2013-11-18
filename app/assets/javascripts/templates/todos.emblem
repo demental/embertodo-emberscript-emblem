@@ -5,9 +5,9 @@ section#todoapp
 
   section#main
     ul#todo-list
-      each
+      each itemController="todo"
         li class=isCompleted:completed
-          input type="checkbox" class="toggle"
+          = input type="checkbox" class="toggle" checked=isCompleted
           label = title
           button class="destroy"
     input type="checkbox" id="toggle-all"
