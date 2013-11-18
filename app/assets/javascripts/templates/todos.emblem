@@ -1,0 +1,26 @@
+section#todoapp
+  header#header
+    h1 Todos
+    input type="text" id="new-todo" placeholder="What needs to be done?"
+
+  section#main
+    ul#todo-list
+      each
+        li class=isCompleted:completed
+          input type="checkbox" class="toggle"
+          label = title
+          button class="destroy"
+    input type="checkbox" id="toggle-all"
+
+  footer#footer
+    span#todo-count
+      strong 2 todos left
+    ul#filters
+      li
+        a href="all" class="selected" All
+      li
+        a href="active" Active
+      li
+        a href="completed" Completed
+
+    button#clear-completed Clear completed (1)
