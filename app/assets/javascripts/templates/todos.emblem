@@ -4,7 +4,7 @@ header#header
 
 section#main
   outlet
-  input type="checkbox" id="toggle-all" checked=allAreDone
+  = input type="checkbox" id="toggle-all" checked=allAreDone
 
 footer#footer
   span#todo-count

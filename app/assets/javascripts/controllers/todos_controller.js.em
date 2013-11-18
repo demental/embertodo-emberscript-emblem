@@ -18,7 +18,12 @@ class Embertodo.TodosController extends Ember.ArrayController
 
   +computed @each.isCompleted
   allAreDone: (key, value) ->
-    @length && @everyBy('isCompleted', true)
+    if value?
+      @setEach 'isCompleted', value
+      @invoke 'save'
+      value
+    else
+      @length && @everyBy('isCompleted', true)
 
   actions:
     clearCompleted: ->
