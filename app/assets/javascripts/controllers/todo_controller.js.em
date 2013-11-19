@@ -1,6 +1,6 @@
 class Embertodo.TodoController extends Ember.ObjectController
 
-  +computed isCompleted
+  +computed model.isCompleted
   isCompleted: (key, value) ->
     if value?
       @model.isCompleted = value
