@@ -63,3 +63,5 @@ gem 'ember-source', '1.2.0.beta.3'
 gem 'handlebars-source', '~> 1.0.12'
 gem 'emblem-rails', '0.2.0'
 gem 'ember-data-source', '~> 1.0.0.beta.3'
+
+gem 'a9s'
